@@ -4,21 +4,22 @@
     <meta charset="utf-8">
     <title>oneheartphotography</title>
     <style>
-     a {
-       color:black;
-       text-decoration: none;}
-     .active {
-       color:red;}
-     .saw {
+       a {
+        color:black;
+        text-decoration: none;}
+      .active {
+         color:red;}
+      .saw {
        color:gray;}
-     h1 {
-       font-size: 50px;
-       text-align: center;}
+      h1 {
+        font-size: 50px;
+        text-align: center;}
 
-     #first{color:green;}
-     .js{font-weight: bold; color: red;}
+      #first{color:green;}
+      .js{font-weight: bold; color: red;}
      span{color:blue;}
     </style>
+    <script src="color.js"></script>
   </head>
   <body>
     <h1><a href="1.html">ONEHEART</a></h1>
@@ -33,31 +34,8 @@
   <input type="text" onkeydown="alert('key down')">
 -->
 
-  <input type="botton" value="night" onclick="
-  var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-      alist[i].style.color ='green';
-      i = i+1;
-     }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color ='black';
-      this.value = 'night';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-      alist[i].style.color ='black';
-      i = i+1;
-    }
-    }
+  <input type="button" value="night" onclick="
+  nightdayHandler(this);
   ">
 
     <ol>
@@ -122,5 +100,43 @@
        </script>
      </ul>
 -->
+
+  <h1>Object</h1>
+  <h2>Create</h2>
+  <script>
+   var coworkers = {
+     "programmer" : "angela",
+     "designer" : "naza"
+   };
+
+     document.write("programmer :" +coworkers.programmer+"<br>");
+     document.write("designer :" +coworkers.designer+"<br>");
+     coworkers.bookkeeper = "dudu";
+     coworkers["data sicientist"] = "Mariana";
+     document.write("bookkeeper :" +coworkers.bookkeeper+"<br>");
+     document.write("data scientist :" +coworkers["data sicientist"]+"<br>");
+
+   </script>
+
+   <h2>Iterate</h2>
+   <script>
+    //La instrucción for-in itera sobre todas las propiedades enumerables de un objeto que está codificado por cadenas (ignorando los codificados por Símbolos, incluidas las propiedades enumerables heredadas.
+    for(var key in coworkers){
+      document.write(key+ ':'+coworkers[key]+'<br>');
+    }
+
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+     coworkers.showAll =function(){
+       for(var key in this){
+         document.write(key+ ':'+this[key]+'<br>');
+       }
+     }
+     coworkers.showAll();
+     </script>
+
+
   </body>
 </html>
