@@ -1,0 +1,54 @@
+<style>
+/* id=# (#name 중복되면 안됨) > class=. > Tag
+block level element
+inline element
+
+border: 5px solid red;
+padding: 20px;
+margin: 20px;
+display: block;
+width: 300px;
+*/
+  body {
+    margin: 0;
+  }
+   a {
+    color:black;
+    text-decoration: none;}
+
+  .active {
+     color:red;}
+  .saw {
+   color:black;}
+
+  h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+  }
+  ol {
+    border-right: 1px solid gray;
+    width:100px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #first{color:green;}
+  .js{font-weight: bold; color: red;}
+  span{color:blue;}
+  #grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+  @media(max-width:350px){
+    #grid{
+      display: block;
+    }
+    ol {
+      border-right: none;
+    }
+  }
+
+</style>
